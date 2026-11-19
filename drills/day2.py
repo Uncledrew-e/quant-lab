@@ -16,4 +16,6 @@ table = pd.DataFrame({
 pd.set_option("display.precision", 6)
 print(table.head(5))
 
-print(df.tail())
+
+df["ret"] = df["close"].pct_change()
+print(df.head())
